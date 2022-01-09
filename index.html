@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
     <title>Studio</title>
 </head>
@@ -25,7 +26,7 @@
                 <li><a class="nav-link" href="./contacts.html">Контакты</a></li>
             </ul>
         </nav>
-
+        
         <!-- Контакты -->
         <ul class="nav-contacts">
             <li>
@@ -49,7 +50,15 @@
         <section class="hero section section-pad">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="btn">Заказать услугу</button>
+                <button type="button" class="btn" data-modal-open>Заказать услугу</button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                        <button class="close-btn" data-modal-close>
+                            <img src="./images/close.svg" alt="close" width="30" height="30">
+                        </button>
+                        </div>
+                    </div>
+                
             </div>
         </section>
         <!-- Перечисление четырёх особенностей -->
@@ -81,9 +90,19 @@
             <div class="container">
             <h2 class="section-header">Чем мы занимаемся</h2>
             <ul class="img-list">
-                <li><img class="img" src="./images/box-one.jpg" alt="Изображение 1" width="370" height="294"></li>
-                <li><img class="img" src="./images/box-two.jpg" alt="Изображение 2" width="370" height="294"></li>
-                <li><img class="img" src="./images/box-three.jpg" alt="Изображение 3" width="370" height="294"></li>
+                <li class="thumb">
+                    <img class="img" src="./images/box-one.jpg" alt="Изображение 1" width="370" height="294">
+                    <p class="label desctop">Десктопные приложения</p>
+                </li>
+                <li class="thumb">
+                    <img class="img" src="./images/box-two.jpg" alt="Изображение 2" width="370" height="294">
+                    <p class="label mobile">Мобильные приложения</p>
+                </li>
+                
+                <li class="thumb">
+                    <img class="img" src="./images/box-three.jpg" alt="Изображение 3" width="370" height="294">
+                    <p class="label design">Дизайнерские решения</p>
+                </li>
             </ul>
             </div>
         </section>
@@ -342,6 +361,8 @@
         </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
