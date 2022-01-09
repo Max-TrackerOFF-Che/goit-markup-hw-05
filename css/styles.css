@@ -476,7 +476,7 @@ img {
 }
 .thumb-overlay {
   position: absolute;
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translatey(100%);
   background: var(--thumb-color-opacity);
   font-size: 18px;
@@ -578,7 +578,7 @@ img {
   opacity: 0;
   pointer-events: none;
 
-  transition: opacity 1s ease-in;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
