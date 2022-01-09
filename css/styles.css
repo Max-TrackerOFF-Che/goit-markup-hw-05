@@ -56,6 +56,7 @@ img {
 }
 .logo {
   padding-right: 93px;
+  padding-top: 24px;
 }
 
 .logo .web-title,
@@ -107,12 +108,32 @@ img {
 }
 
 .nav-link {
+  position: relative;
+
+  display: block;
   color: inherit;
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   margin-right: 50px;
+  padding-bottom: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.current.nav-link::after {
+  position: absolute;
+
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-effect);
+  border-radius: 2px;
+  bottom: 0;
+  /* opacity: 0; */
 }
 
 .nav-list .nav-link:hover,
@@ -122,6 +143,7 @@ img {
 .nav-list .nav-link.current {
   color: var(--hover-effect);
 }
+
 /*-------------- Хэдер------------------- */
 .header {
   border-bottom: 1px solid #ececec;
@@ -131,7 +153,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0px 25px 0px;
 }
 .nav-logo {
   display: flex;
@@ -139,7 +160,6 @@ img {
 }
 .nav-list {
   display: flex;
-  margin: 0px 34px 0px;
   align-items: center;
   width: 294px;
   justify-content: space-between;
