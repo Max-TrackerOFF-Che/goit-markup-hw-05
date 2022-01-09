@@ -9,6 +9,8 @@
   --background-color-cards: #5E5E5;
   --icons-color: #afb1b8;
   --button-footer-bgc: rgba(255, 255, 255, 0.1);
+  --thumb-color-opacity: rgba(33, 150, 243, 0.9);
+  --cubic-transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 * {
   box-sizing: border-box;
@@ -462,11 +464,35 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
 .project-link:hover,
 .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb-overlay {
+  position: absolute;
+  transition: transform 250ms linear;
+  transform: translatey(100%);
+  background: var(--thumb-color-opacity);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--background-color);
+  text-align: center;
+  padding: 63px 24px;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.project-link:hover .thumb-overlay {
+  transform: translatey(0);
+}
+
 .project-image {
   margin-left: 0;
   margin-right: 0;
