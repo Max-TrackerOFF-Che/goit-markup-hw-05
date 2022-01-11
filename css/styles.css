@@ -542,6 +542,8 @@ img {
   font-style: normal; /* здесь пришлось перебить тег адрес */
   font-weight: 400;
   line-height: 1.71;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
